@@ -25,4 +25,35 @@ $(function () {
     $('.team__slider').slick('slickNext')
   });
 
+  /*=======================================SLIDER TESTIMONIALS============================================================*/
+
+
+  $('.testimonials__slider').slick({
+    arrows: false,
+    draggable: false,
+    dots: true,
+    appendDots: $('.testimonials__dots'),
+    waitForAnimate: false,
+    responsive: [
+      {
+        breakpoint: 700,
+        settings: {
+          slidesToScroll: 1,
+          draggable: true
+        }
+      }
+    
+    ]
+  })
+
+  $('.testimonials__prev').on('click', function(e){
+    e.preventDefault()
+    $('.testimonials__slider').slick('slickPrev')
+  })
+
+  $('.testimonials__next').on('click', function(e){
+    e.preventDefault()
+    $('.testimonials__slider').slick('slickNext')
+  });
+
   });
