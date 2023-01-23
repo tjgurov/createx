@@ -56,4 +56,15 @@ $(function () {
     $('.testimonials__slider').slick('slickNext')
   });
 
+/*=======================================ACCORDEON============================================================*/
+
+
+document.querySelectorAll('.acc__link').forEach((item) =>
+item.addEventListener('click', () => {
+  const parent = item.parentNode;
+
+  parent.classList.toggle('acc__link--active');
+})
+);
+
   });
